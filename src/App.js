@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
+import Results from "./Results";
 
 function App() {
   const [title, setTitle] = useState("");
@@ -15,7 +16,8 @@ function App() {
         `http://www.omdbapi.com/?apikey=1e9a13fb&s=${title}`
       );
       const movieMatch = await movies.json();
-      setMovieResult(movieMatch);
+      setMovieResult(movieMatch.Search);
+      setTitle("");
     } catch (error) {
       console.log(`Error: ${error}`);
     }
@@ -24,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar setTitle={setTitle} title={title} fetchMovies={fetchMovies} />
+      <Results movieResult={movieResult} />
     </div>
   );
 }

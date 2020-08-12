@@ -11,7 +11,11 @@ const Navbar = ({ setTitle, title, fetchMovies }) => {
         <Button onClick={(e) => fetchMovies(e)}>
           <img src={search} alt="search button" width="15" />
         </Button>
-        <SearchBar type="text" onChange={(e) => setTitle(e.target.value)} />
+        <SearchBar
+          value={title}
+          type="text"
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <Button>
           <img src={deleteLogo} alt="search button" width="10" />
         </Button>

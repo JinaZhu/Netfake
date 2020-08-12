@@ -34,3 +34,16 @@ export const SearchBar = styled.input`
 export const Logo = styled.h1`
   color: #e50914;
 `;
+
+export const MovieCover = styled.img`
+  width: 150px;
+  height: 300px;
+  object-fit: cover;
+`;
+
+export const Gallery = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+`;
