@@ -36,14 +36,16 @@ export const Logo = styled.h1`
 `;
 
 export const MovieCover = styled.img`
-  width: 150px;
+  width: 200px;
   height: 300px;
   object-fit: cover;
+  margin-bottom: 5rem;
 `;
 
 export const Gallery = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  flex-wrap: wrap;
+  margin: 5rem;
 `;
