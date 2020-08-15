@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import Results from "./Results";
+import config from "./config";
+
+const apiKey = config.omdgAPIKey;
 
 function App() {
   const [title, setTitle] = useState("");
@@ -13,7 +16,7 @@ function App() {
     e.preventDefault();
     try {
       const movies = await fetch(
-        `http://www.omdbapi.com/?apikey=1e9a13fb&s=${title}`
+        `http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`
       );
       const movieMatch = await movies.json();
       setMovieResult(movieMatch.Search);
