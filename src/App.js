@@ -25,6 +25,7 @@ function App() {
       console.log(`Error: ${error}`);
     }
   };
+  console.log(movieResult);
 
   return (
     <div className="App">
