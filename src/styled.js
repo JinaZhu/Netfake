@@ -49,3 +49,14 @@ export const Gallery = styled.div`
   flex-wrap: wrap;
   margin: 5rem;
 `;
+
+export const LoadButton = styled.button`
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  padding: 1rem;
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+`;
