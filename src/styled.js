@@ -12,7 +12,6 @@ export const SearchForm = styled.form`
     justify-content: flex-end;
     height 35px; 
     border: 1px solid white; 
-    
 `;
 
 export const Button = styled.button`
